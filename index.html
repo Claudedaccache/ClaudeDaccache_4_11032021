@@ -21,15 +21,14 @@
       <a href="#" class="active"><span>Accueil</span></a>
       <a href="#"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
+      <a href="mailto:Contact.us@Gameon.com"><span>Contact</span></a>
       <a href="#"><span>Évènements passés</span></a>
       <a href="javascript:void(0);" class="icon" onclick="editNav()">
         <i class="fa fa-bars"></i></a>
      </div>
     </div>
-    </header>
+  </header>
 
-  </div>
     <main>
       <div class="hero-section">
         <div class="hero-content">
@@ -59,14 +58,15 @@
           <span class="close"></span>
           <div class="modal-body">
             <form
+              id="myForm"
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              onsubmit="return formValidation();"
             >
               <div class="formData">
                 <label for="first" >Prénom</label><br>
-                <input class="text-control" type="text" id="first" name="first" minlength="2" required /><br>
+                <input class="text-control" type="text" id="first" name="first" minlength="2" placeholder="Ex: James.."  /><br>
                 <span id="nameErrorMessage"></span>
               </div>
               <div
@@ -77,7 +77,8 @@
                   type="text"
                   id="last"
                   name="last"
-                  required
+                  placeholder="Ex: Smith.."
+                  
                 /><br>
                 <span id="lastNameErrorMessage"></span>
               </div>
@@ -89,7 +90,8 @@
                   type="email"
                   id="email"
                   name="email"
-                  required
+                  placeholder="Ex: James_Smith@hotmail.com"
+                  
                 /><br>
                 <span id="emailErrorMessage"></span>
               </div>
@@ -100,17 +102,15 @@
                   class="text-control"
                   type="date"
                   id="birthdate"
-                  name="birthdate"
-                  required
-                /><br>
+                  name="birthdate">
                 <span id="dateErrorMessage"></span>
               </div></br>
-              <div
-                class="formData">
+              <div class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required>
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
                 <span id="quantityErrorMessage"></span>
               </div>
+              <div id="checkboxModified">
               <p class="text-label">Quelles villes ?</p>
               <div
                 class="formData checkboxRadio">
@@ -181,6 +181,7 @@
                   Portland</label
                 >
               </div>
+            </div>
 
               <div
                 class="formData">
@@ -188,19 +189,17 @@
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  checked
                 />
-                <label class="checkbox2-label" for="checkbox1" required>
+                <label class="checkbox2-label check_condition" for="checkbox1" >
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <br>
-                <span id="conditionErrorMessage"></span>
+                <span id="conditionErrorMessage"></span> <br>
 
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
@@ -212,6 +211,7 @@
               />
             </form>
           </div>
+          <span id="formValidationMessage">Votre formulaire a bien été envoyé <br><br><br> Merci et à bientôt!</span>
         </div>
       </div>
     </main>
