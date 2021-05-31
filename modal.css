@@ -117,6 +117,14 @@ img {
   main {
     margin: 1px;
   }
+
+  .bground {
+    margin-top: 5rem;
+  }
+
+  #formValidationMessage {
+    font-size: 0.6rem;
+  }
 }
 @media screen and (max-width: 430px) {
   .theLogo {
@@ -219,7 +227,7 @@ label {
   font-size: 17px;
   font-weight: normal;
   display: inline-block;
-  margin-bottom: 8px;
+  margin: 8px 0;
 }
 input {
   padding: 8px;
@@ -234,6 +242,17 @@ input {
   font-size: 20px;
   height: 48px;
 }
+
+input::placeholder {
+  font-size: 0.9rem;
+}
+
+#formValidationMessage {
+  visibility: hidden;
+  font-family: Roboto, sans-serif;
+  font-size: 2rem;
+}
+
 /* .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
@@ -505,7 +524,9 @@ input[data-error]::after {
 #lastNameErrorMessage,
 #emailErrorMessage,
 #dateErrorMessage,
-#quantityErrorMessage {
+#quantityErrorMessage,
+#conditionErrorMessage {
+  font-family: Roboto, sans-serif;
   font-size: 0.8rem;
   margin-top: 0;
   padding-top: 0;
