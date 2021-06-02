@@ -5,28 +5,36 @@
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="modal.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/406da18a0b.js" crossorigin="anonymous" defer></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
   </head>
   
   <body>
     <header>
     <div class="topnav" id="myTopnav">
+      <div id="hamburgerMenu">
       <div class="header-logo">
         <img class="theLogo" alt="logo" src="Logo.png"/>
       </div>
+      <div id="hamburgerIcon">
+        <a href="javascript:void(0);" class="icon"> <!-- onclick="editNav()">-->
+          <i class="fa fa-bars"></i></a>
+          
+      </div>
+      </div>
       <!-- width="auto" height="auto" -->
 
-     <div class="main-navbar">
-      <a href="#" class="active"><span>Accueil</span></a>
-      <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="mailto:Contact.us@Gameon.com"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
-        <i class="fa fa-bars"></i></a>
+     <nav class="main-navbar">
+       <ul class="navList">
+      <li><a href="#" class="active"><span>Accueil</span></a></li>
+      <li><a href="#"><span>Détails de l'évènement</span></a></li>
+      <li><a href="#"><span>À propos</span></a></li>
+      <li><a href="mailto:Contact.us@Gameon.com"><span>Contact</span></a></li>
+      <li><a href="#"><span>Évènements passés</span></a></li>
+    </ul>
+     </nav>
      </div>
-    </div>
   </header>
 
     <main>
