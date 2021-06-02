@@ -27,6 +27,13 @@ var formValidationMessage = document.getElementById ("formValidationMessage");
 var content = document.querySelector(".content");
 var btnSubmit = document.querySelector(".btn-submit");
 
+var hamburgerIcon = document.getElementById("hamburgerIcon");
+var hamburgerMenu = document.getElementById("hamburgerMenu");
+var mainNavbar = document.querySelector(".main-navbar");
+var navList = document.querySelector(".navList");
+var navListLi = document.querySelectorAll(".navList li");
+var topnav = document.querySelector(".topnav");
+
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBody = document.querySelector(".modal-body");
@@ -36,14 +43,26 @@ const myForm = document.getElementById ("myForm");
 const close = document.querySelector('.close');
 
 
-function editNav() {
+/*function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
     x.className = "topnav";
   }
-}
+}*/
+
+//opening of hamburger menu:
+hamburgerIcon.addEventListener("click", () => {
+  if (navList.className === "navList") {
+    navList.className += " responsive";
+  } else {
+    navList.className = "navList";
+  }
+})
+
+
+
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
