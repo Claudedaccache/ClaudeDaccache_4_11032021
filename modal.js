@@ -1,21 +1,21 @@
 // form variables and validation
 var yourName = document.getElementById ("first");
 var nameErrorMessage = document.getElementById("nameErrorMessage");
-var validName = /^[a-zA-ZîèéïÉÈ][a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ]+([-'\s][a-zA-ZÜüàÀÏÎÉÈîèéï][a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ]+)?/;
+var validName = /^[a-zA-ZîèéïÉÈ][a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ]+([^0-9]*)$([-'\s][a-zA-ZÜüàÀÏÎÉÈîèéï][a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ]+([^0-9]*)$)?/;
 
 var lastName = document.getElementById ("last");
 var lastNameErrorMessage = document.getElementById("lastNameErrorMessage");
-var validLastName = /^[a-zA-ZîèéïÉÈ][a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ]+([-'\s][a-zA-ZÜüàÀÏÎÉÈîèéï][a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ]+)?/;
+var validLastName = /^[a-zA-ZîèéïÉÈ][a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ]+([^0-9]*)$([-'\s][a-zA-ZÜüàÀÏÎÉÈîèéï][a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ]+([^0-9]*)$)?/;
 
 var email = document.getElementById ("email");
 var emailErrorMessage = document.getElementById("emailErrorMessage");
-var validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/
+var validEmail = /^[a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ][a-zA-ZàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/
 
 var birthdate = document.getElementById ("birthdate");
 var dateErrorMessage = document.getElementById("dateErrorMessage");
 
 var quantity = document.getElementById ("quantity");
-var validQuantityErrorMessage = /^[0-9]+/;
+var validQuantityErrorMessage = /^[0-9]+([^a-zA-Z]*)$/;
 var quantityErrorMessage = document.getElementById("quantityErrorMessage");
 
 var checkboxCondition = document.getElementById("checkbox1");
@@ -77,7 +77,6 @@ function closing (){
   dateErrorMessage.innerHTML = "";
   birthdate.value = "";
   conditionErrorMessage.innerHTML = ""
- 
 }
 
 
@@ -97,7 +96,7 @@ function formValidation (e){
     modalBody.remove();
     content.style.width= "100%";
     content.style.height= "100%";
-    content.style.padding= "12rem 3rem 0 3rem";
+    content.style.padding= "8rem 3rem 0 3rem";
     formValidationMessage.style.visibility= "visible";
     return myForm.submit();
     }
@@ -262,13 +261,12 @@ function conditionValidation(e){
   if (checkboxCondition.checked == false){
     conditionErrorMessage.innerHTML = "Veuillez cocher la case pertinente.";
     conditionErrorMessage.style.color = "red";
-    return false;
+  return false;
     }
 
   else {
     conditionErrorMessage.innerHTML = "";
     return true;}
 }
-
 
 
