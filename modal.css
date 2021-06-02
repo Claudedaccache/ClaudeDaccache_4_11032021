@@ -74,7 +74,7 @@ img {
 }
 
 /* @media screen and (max-width: 768px) { */
-@media screen and (max-width: 994px) {
+@media screen and (max-width: 997px) {
   .topnav a {
     display: none;
   }
@@ -119,11 +119,11 @@ img {
   }
 
   .bground {
-    margin-top: 5rem;
+    margin-top: 4.6rem;
   }
 
   #formValidationMessage {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 430px) {
@@ -245,11 +245,12 @@ input {
 
 input::placeholder {
   font-size: 0.9rem;
+  font-family: var(--font-default);
 }
 
 #formValidationMessage {
   visibility: hidden;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-default);
   font-size: 2rem;
 }
 
@@ -526,10 +527,11 @@ input[data-error]::after {
 #dateErrorMessage,
 #quantityErrorMessage,
 #conditionErrorMessage {
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-default);
   font-size: 0.8rem;
   margin-top: 0;
   padding-top: 0;
+  word-spacing: normal;
 }
 
 footer {
