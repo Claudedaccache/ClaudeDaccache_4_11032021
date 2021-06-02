@@ -38,15 +38,17 @@ img {
   margin: 3.5%;
   position: relative;
 }
-/* .header-logo {
-  float: left;
-}
-.main-navbar {
-  float: right;
-} */
 
-.topnav a {
-  float: left;
+.navList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navList a {
   display: block;
   color: #000000;
   text-align: center;
@@ -56,8 +58,7 @@ img {
   font-size: 17px;
   font-family: Roboto, sans-serif;
 }
-
-.topnav a:hover {
+.navList a:hover {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
@@ -69,51 +70,69 @@ img {
   border-radius: 15px;
 }
 
-.topnav .icon {
+#hamburgerIcon {
   display: none;
 }
 
-/* @media screen and (max-width: 768px) { */
-@media screen and (max-width: 997px) {
-  .topnav a {
-    display: none;
+@media screen and (max-width: 830px) {
+  #hamburgerMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
   }
-  .topnav a.icon {
-    position: absolute;
-    top: 0px;
-    right: 1px;
-    /* float: right; */
-    display: block;
-  }
-  /* } */
 
-  /* @media screen and (max-width: 768px) { */
-  .topnav.responsive {
+  .topnav {
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+
+  .navList {
+    display: none;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    transition: all 0.5s ease-in-out;
   }
-  .topnav.responsive a {
-    float: none;
+  .navList.responsive {
     display: block;
-    text-align: left;
+  }
+  .navList li {
+    background-color: rgba(26, 39, 156, 0.1);
+    border-radius: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .navList li a {
+    text-decoration: none;
+  }
+
+  #hamburgerIcon {
+    position: absolute;
+    right: 0.5rem;
+    top: 1.2rem;
+    display: block;
+    cursor: pointer;
+  }
+
+  #hamburgerIcon .icon {
+    color: red;
+    padding: 8px;
+  }
+  #hamburgerIcon .icon:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 15px;
   }
 }
 
 @media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
-  }
-  .topnav a.icon {
-    position: absolute;
-    top: 0px;
-    right: 1px;
-    display: block;
-  }
-
   main {
     margin: 1px;
   }
@@ -126,14 +145,17 @@ img {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 430px) {
-  .theLogo {
-    width: 11rem;
-    height: 3.5rem;
-  }
 
+@media screen and (max-width: 430px) {
   .hero-headline {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .theLogo {
+    width: 12rem;
+    height: 3.5rem;
   }
 }
 
