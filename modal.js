@@ -164,7 +164,7 @@ function lastNameValidation(e){
     // e.preventDefault();
     lastNameErrorMessage.innerHTML = "Veuillez renseigner votre Nom.";
     lastNameErrorMessage.style.color = "red";
-    yourName.style.border = "2.5px solid red";
+    lastName.style.border = "2.5px solid red";
     return false;
   }
 
