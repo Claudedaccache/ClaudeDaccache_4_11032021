@@ -55,7 +55,7 @@ img {
   padding: 12px 12px;
   margin: 3px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
   font-family: Roboto, sans-serif;
 }
 .navList a:hover {
@@ -74,7 +74,7 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 963px) {
   #hamburgerMenu {
     display: flex;
     flex-direction: row;
@@ -195,12 +195,12 @@ main {
 
 /* Modal form */
 
-.button {
+#button {
   background: #fe142f;
   margin-top: 0.5em;
-  padding: 1em;
+  padding: 1rem 1.8rem;
   color: #fff;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
 }
@@ -579,9 +579,10 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     white-space: normal;
     margin-bottom: 0;
+    word-wrap: break-word;
   }
   .hero-text {
     width: unset;
