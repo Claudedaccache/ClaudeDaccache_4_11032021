@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>Reservation</title>
+    <meta name="description" content="inscription a des événements gaming">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="modal.css" />
-    <script src="https://kit.fontawesome.com/406da18a0b.js" crossorigin="anonymous" defer></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
   </head>
   
@@ -110,9 +110,10 @@
                   class="text-control"
                   type="date"
                   id="birthdate"
-                  name="birthdate">
+                  name="birthdate"
+                  >
                 <span id="dateErrorMessage"></span>
-              </div></br>
+              </div><br>
               <div class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
@@ -215,7 +216,7 @@
               <input
                 class="btn-submit"
                 type="submit"
-                class="button"
+                id="button"
                 value="C'est parti"
               />
             </form>
