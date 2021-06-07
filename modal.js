@@ -138,7 +138,7 @@ function nameValidation(e){
       // e.preventDefault();
       nameErrorMessage.innerHTML = "Le prénom renseigné est très court!";
       nameErrorMessage.style.color = "orange";
-      yourName.style.border = "2.5px solid red";
+      yourName.style.border = "2.5px solid orange";
       return false;
     }
     
@@ -146,7 +146,7 @@ function nameValidation(e){
       // e.preventDefault();
       nameErrorMessage.innerHTML = "Veuillez respecter le format requis!";
       nameErrorMessage.style.color = "orange";
-      yourName.style.border = "2.5px solid red";
+      yourName.style.border = "2.5px solid orange";
       return false;
     }
     
@@ -172,7 +172,7 @@ function lastNameValidation(e){
       // e.preventDefault();
       lastNameErrorMessage.innerHTML = "Le prénom renseigné est très court!";
       lastNameErrorMessage.style.color = "orange";
-      lastName.style.border = "2.5px solid red";
+      lastName.style.border = "2.5px solid orange";
       return false;
     }
     
@@ -180,7 +180,7 @@ function lastNameValidation(e){
       // e.preventDefault();
       lastNameErrorMessage.innerHTML = "Veuillez respecter le format requis!";
       lastNameErrorMessage.style.color = "orange";
-      lastName.style.border = "2.5px solid red";
+      lastName.style.border = "2.5px solid orange";
       return false;
     }
     
@@ -206,7 +206,7 @@ function emailValidation(e){
         // e.preventDefault();
         emailErrorMessage.innerHTML = "Veuillez respecter le format du e-mail! (exemple@domaine.fr)";
         emailErrorMessage.style.color = "orange";
-        email.style.border = "2.5px solid red";
+        email.style.border = "2.5px solid orange";
         return false;
       }
     
@@ -232,7 +232,7 @@ function quantityValidation(e){
       // e.preventDefault();
       quantityErrorMessage.innerHTML = "Veuillez respecter le format requis";
       quantityErrorMessage.style.color = "orange";
-      quantity.style.border = "2.5px solid red";
+      quantity.style.border = "2.5px solid orange";
       return false;
     }
 
