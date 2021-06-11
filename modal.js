@@ -9,7 +9,7 @@ var validLastName = /^[a-zA-ZîèéïÉÈ][a-zàâçéèêëîïùûüÜÛÙÏÎ
 
 var email = document.getElementById ("email");
 var emailErrorMessage = document.getElementById("emailErrorMessage");
-var validEmail = /^[a-zàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ][a-zA-ZàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/
+var validEmail = /^[a-zA-ZàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ][a-zA-ZàâçéèêëîïùûüÜÛÙÏÎËÊÈÉÇÂÀ0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/
 
 var birthdate = document.getElementById ("birthdate");
 var dateErrorMessage = document.getElementById("dateErrorMessage");
@@ -134,7 +134,7 @@ function nameValidation(e){
     return false;
   }
 
-    else if (yourName.value.length <= 2){
+    else if (yourName.value.length < 2){
       // e.preventDefault();
       nameErrorMessage.innerHTML = "Le prénom renseigné est très court!";
       nameErrorMessage.style.color = "orange";
