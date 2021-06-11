@@ -168,7 +168,7 @@ function lastNameValidation(e){
     return false;
   }
 
-    else if (lastName.value.length <= 2){
+    else if (lastName.value.length < 2){
       // e.preventDefault();
       lastNameErrorMessage.innerHTML = "Le prénom renseigné est très court!";
       lastNameErrorMessage.style.color = "orange";
